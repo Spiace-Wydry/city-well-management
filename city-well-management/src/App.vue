@@ -3,17 +3,17 @@ import { RouterLink } from "vue-router";
 import NavigationItem from "./components/NavigationItem.vue";
 import { ref } from "vue";
 
-const drawerOpen = ref(false);
+const drawerOpen = ref(true);
 const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
 </script>
 
 <template>
-  <QLayout view="hHh lpR fFf">
+  <QLayout view="lHh lpR lFf">
     <QHeader elevated class="bg-primary text-white">
       <QToolbar>
-        <div class="fancy-border">
+        <!-- <div class="fancy-border">
           <QBtn dense flat icon="menu" @click="toggleDrawer" />
-        </div>
+        </div> -->
         <QToolbarTitle>
           <RouterLink to="/" class="link">
             <QAvatar rounded>
@@ -26,7 +26,7 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
     </QHeader>
 
     <QDrawer v-model="drawerOpen" show-if-above side="left" bordered>
-      <NavigationItem label="Test" icon="fas fa-regular fa-close" to="test" />
+      <NavigationItem label="Zbiorniki" icon="fas fa-solid fa-glass-water" to="tanks" />
     </QDrawer>
 
     <QPageContainer>
