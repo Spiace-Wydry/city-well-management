@@ -6,8 +6,8 @@ import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  publicDir: process.env.NODE_ENV === 'production'
-    ? '/city-well-management'
+  base: process.env.NODE_ENV === 'production'
+    ? '/city-well-management/'
     : '/',
   plugins: [
     vue({
