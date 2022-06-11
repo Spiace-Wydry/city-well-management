@@ -36,9 +36,6 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
 </template>
 
 <style lang="scss">
-.fancy-border {
-}
-
 .link {
   text-decoration: none;
   color: inherit;
