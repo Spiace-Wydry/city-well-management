@@ -14,8 +14,6 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
 
     <QHeader elevated class="bg-primary text-white">
       <QToolbar>
-        <QBtn dense flat round icon="menu" @click="toggleLeftDrawer" />
-
         <QToolbarTitle>
           <QAvatar>
             <img src="./assets/Logo.svg" />
@@ -24,11 +22,14 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
             Studnia miejska
           </RouterView>
         </QToolbarTitle>
+        <div class="fancy-border">
+          <QBtn dense flat icon="menu" @click="toggleLeftDrawer" color="black"/>
+        </div>
       </QToolbar>
     </QHeader>
 
-    <QDrawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <NavigationItem label="Test" icon="fa-close"/>
+    <QDrawer show-if-above v-model="leftDrawerOpen" side="right" bordered>
+      <NavigationItem label="Test" icon="fas fa-regular fa-close"/>
     </QDrawer>
 
     <QPageContainer>
@@ -42,5 +43,19 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
 .header {
   color: azure;
   margin-left: 10px;
+}
+
+.fancy-border {
+  background-color: white;
+  border-radius: 0px 0px 0px 24px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 </style>
