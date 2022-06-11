@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 import { useQuasar } from "quasar";
 import NavigationItem from "./components/NavigationItem.vue";
 import { ref } from "vue";
@@ -15,12 +15,12 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
     <QHeader elevated class="bg-primary text-white">
       <QToolbar>
         <QToolbarTitle>
-          <QAvatar>
-            <img src="./assets/Logo.svg" />
-          </QAvatar>
-          <RouterView link="/" class="header">
-            Studnia miejska
-          </RouterView>
+          <RouterLink to="/" class="link">
+            <QAvatar>
+              <img src="./assets/Logo.svg" />
+            </QAvatar>
+              Studnia miejska
+          </RouterLink>
         </QToolbarTitle>
         <div class="fancy-border">
           <QBtn dense flat icon="menu" @click="toggleLeftDrawer" color="black"/>
@@ -29,7 +29,7 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
     </QHeader>
 
     <QDrawer show-if-above v-model="leftDrawerOpen" side="right" bordered>
-      <NavigationItem label="Test" icon="fas fa-regular fa-close"/>
+      <NavigationItem label="Test" icon="fas fa-regular fa-close" to="test"/>
     </QDrawer>
 
     <QPageContainer>
@@ -40,11 +40,6 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
 </template>
 
 <style lang="scss">
-.header {
-  color: azure;
-  margin-left: 10px;
-}
-
 .fancy-border {
   background-color: white;
   border-radius: 0px 0px 0px 24px;
@@ -57,5 +52,10 @@ const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.link {
+  text-decoration: none; 
+  color: inherit;
 }
 </style>
