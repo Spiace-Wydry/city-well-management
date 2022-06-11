@@ -12,7 +12,7 @@ var props = defineProps<{
 </script>
 
 <template>
-    <QItem dense v-ripple clickable @click="router.push(props.to)" class="item">
+    <QItem dense v-ripple clickable @click="router.push(props.to)" class="item text-white">
         <QItemSection avatar>
             <QIcon :name="props.icon" />
         </QItemSection>
@@ -26,6 +26,6 @@ var props = defineProps<{
 .item {
     width: 90%;
     background-color: $primary;
-    border-radius: 0em 1em 1em 0em;
+    border-radius: 0px 12px 12px 0px;
 }
 </style>
