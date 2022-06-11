@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 import { useQuasar } from "quasar";
+import NavigationItem from "./components/NavigationItem.vue";
+import { ref } from "vue";
+
 const $q = useQuasar();
+const leftDrawerOpen = ref(false);
+const toggleLeftDrawer = () => leftDrawerOpen.value = !leftDrawerOpen.value;
 </script>
 
 <template>
@@ -23,7 +28,7 @@ const $q = useQuasar();
     </QHeader>
 
     <QDrawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <NavigationItem>
+      <NavigationItem label="Test" icon="fa-close"/>
     </QDrawer>
 
     <QPageContainer>
