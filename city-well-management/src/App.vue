@@ -26,22 +26,24 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
     </QHeader>
 
     <QDrawer v-model="drawerOpen" show-if-above side="left" bordered behavior="desktop">
-      <div class="app-drawer-containter">
-        <h4>Kraków</h4>
-        <div class="app-drawer-content">
-          <p class="nav-section-title">Moje miasto</p>
-          <NavigationItem label="Zbiorniki" icon="fas fa-solid fa-glass-water" @hide="drawerOpen = true" to="tanks" />
-          <NavigationItem label="Dodaj zbiornik" icon="fas fa-solid fa-circle-plus" @hide="drawerOpen = true"
-            to="tanks" />
-          <NavigationItem label="Zgłoszenia" icon="fas fa-solid fa-circle-exclamation" @hide="drawerOpen = true"
-            to="tanks" />
-          <p class="nav-section-title">Informacje</p>
-          <NavigationItem label="Alerty" icon="fas fa-solid fa-bell" @hide="drawerOpen = true" to="tanks" />
-          <NavigationItem label="Pogoda" icon="fas fa-solid fa-cloud-sun" @hide="drawerOpen = true" to="tanks" />
-          <p class="nav-section-title">Dodatkowe informacje</p>
-          <NavigationItem label="Okoliczne zasoby wodne" icon="fas fa-solid fa-water" @hide="drawerOpen = true"
-            to="tanks" />
-          <NavigationItem label="Wododawcy" icon="fas fa-solid fa-person" @hide="drawerOpen = true" to="tanks" />
+      <div class="app-drawer">
+        <h4 style="margin-left: 1em;">Kraków</h4>
+        <div class="app-drawer-containter">
+          <div class="app-drawer-content">
+            <p class="nav-section-title">Moje miasto</p>
+            <NavigationItem label="Zbiorniki" icon="fas fa-solid fa-glass-water" @hide="drawerOpen = true" to="tanks" />
+            <NavigationItem label="Dodaj zbiornik" icon="fas fa-solid fa-circle-plus" @hide="drawerOpen = true"
+              to="tanks" />
+            <NavigationItem label="Zgłoszenia" icon="fas fa-solid fa-circle-exclamation" @hide="drawerOpen = true"
+              to="tanks" />
+            <p class="nav-section-title">Informacje</p>
+            <NavigationItem label="Alerty" icon="fas fa-solid fa-bell" @hide="drawerOpen = true" to="tanks" />
+            <NavigationItem label="Pogoda" icon="fas fa-solid fa-cloud-sun" @hide="drawerOpen = true" to="tanks" />
+            <p class="nav-section-title">Dodatkowe informacje</p>
+            <NavigationItem label="Okoliczne zasoby wodne" icon="fas fa-solid fa-water" @hide="drawerOpen = true"
+              to="tanks" />
+            <NavigationItem label="Wododawcy" icon="fas fa-solid fa-person" @hide="drawerOpen = true" to="tanks" />
+          </div>
         </div>
       </div>
     </QDrawer>
@@ -62,13 +64,19 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
   color: inherit;
 }
 
+.app-drawer {
+  background-color: #F2F2F2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .app-drawer-containter {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F2F2F2;
-
+  height: 100%;
 }
 
 .app-drawer-content {
