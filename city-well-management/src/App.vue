@@ -9,11 +9,8 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
 
 <template>
   <QLayout view="lHh lpR lFf">
-    <QHeader elevated class="bg-primary text-white">
+    <QHeader class="bg-primary text-white fancy-border">
       <QToolbar>
-        <!-- <div class="fancy-border">
-          <QBtn dense flat icon="menu" @click="toggleDrawer" />
-        </div> -->
         <QToolbarTitle>
           <RouterLink to="/" class="link">
             <QAvatar rounded>
@@ -37,7 +34,7 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
             <NavigationItem label="Zgłoszenia" icon="fas fa-solid fa-circle-exclamation" @hide="drawerOpen = true"
               to="tanks" />
             <p class="nav-section-title">Informacje</p>
-            <NavigationItem label="Alerty" icon="fas fa-solid fa-bell" @hide="drawerOpen = true" to="tanks" />
+            <NavigationItem label="Alerty" icon="fas fa-solid fa-bell" @hide="drawerOpen = true" to="alerts" />
             <NavigationItem label="Pogoda" icon="fas fa-solid fa-cloud-sun" @hide="drawerOpen = true" to="tanks" />
             <p class="nav-section-title">Dodatkowe informacje</p>
             <NavigationItem label="Okoliczne zasoby wodne" icon="fas fa-solid fa-water" @hide="drawerOpen = true"
@@ -54,6 +51,10 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
 </template>
 <i class="fa-solid fa-water"></i>
 <style lang="scss">
+.fancy-border {
+  border-bottom-left-radius: 1em;
+}
+
 .nav-section-title {
   margin-left: 1em;
   font-size: 20px;

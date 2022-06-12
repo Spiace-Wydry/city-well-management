@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import TanksPage from "@/views/TanksPage.vue";
 import HomePage from "@/views/HomePage.vue";
+import AlertsPage from "@/views/AlertsPage.vue";
 
 
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
       path: "/tanks",
       name: "tanks",
       component: TanksPage,
+    },
+    {
+      path: "/alerts",
+      name: "alerts",
+      component: AlertsPage,
     },
   ],
 });
