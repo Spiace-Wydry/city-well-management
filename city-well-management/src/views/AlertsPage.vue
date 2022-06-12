@@ -4,7 +4,6 @@ import { ref } from 'vue';
 
 var quasar = useQuasar();
 
-
 const date = ref("");
 const text = ref("");
 

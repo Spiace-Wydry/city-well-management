@@ -32,7 +32,7 @@ const toggleDrawer = () => (drawerOpen.value = !drawerOpen.value);
             <NavigationItem label="Dodaj zbiornik" icon="fas fa-solid fa-circle-plus" @hide="drawerOpen = true"
               to="tanks" />
             <NavigationItem label="Zgłoszenia" icon="fas fa-solid fa-circle-exclamation" @hide="drawerOpen = true"
-              to="tanks" />
+              to="reports" />
             <p class="nav-section-title">Informacje</p>
             <NavigationItem label="Alerty" icon="fas fa-solid fa-bell" @hide="drawerOpen = true" to="alerts" />
             <NavigationItem label="Pogoda" icon="fas fa-solid fa-cloud-sun" @hide="drawerOpen = true" to="tanks" />
